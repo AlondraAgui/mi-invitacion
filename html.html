@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Digital</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://st4.depositphotos.com/1125138/38265/i/950/depositphotos_382652612-stock-photo-first-holy-communion-invitation-card.jpg'); /* Agregar imagen de fondo */
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+        }
+
+        /* Tarjeta de invitación */
+        .invitacion {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 400px;
+            position: relative;
+            padding-top: 40px;
+        }
+
+        /* Imagen de flores */
+        .flores {
+            width: 100px;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Contenedor del sobre */
+        .sobre {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 20px auto;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        /* Imagen del sobre */
+        .tapa {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: top center;
+            transition: transform 0.8s ease-in-out;
+            z-index: 2;
+        }
+
+        /* Carta dentro del sobre */
+        .carta {
+            width: 100%;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            z-index: 1;
+        }
+
+        /* Clase para abrir el sobre */
+        .abierto .tapa {
+            transform: rotateX(180deg);
+        }
+
+        .abierto .carta {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        /* Botones de opciones */
+        .opciones {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .opcion {
+            text-decoration: none;
+            color: white;
+            background: #83d1eb;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 1s;
+        }
+
+        .opcion:hover {
+            background: #fff45f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio que se reproduce automáticamente al cargar la página -->
+    <audio autoplay loop>
+        <source src="https://drive.google.com/file/d/10_o6ZAEEl5mrWt_GypEmIdZCXmCNfxTZ/view?usp=drivesdk" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    
+    
+
+    <div class="invitacion">
+        <img src="https://source.unsplash.com/100x100/?flowers" class="flores" alt="Flores">
+        <h2>Jose Yael Lopez Aguilar </h2>
+        <p>📅 Sabado 3 de Mayo | 15:00h</p>
+
+        <div class="sobre" onclick="abrirSobre()">
+            <!-- Imagen del sobre cerrado -->
+            <img src="https://i.imgur.com/TtWxflq.png" class="tapa" alt="Sobre cerrado">
+        </div>
+
+        <div class="opciones">
+            <a href="https://wa.me/523312525530?text=Confirmo%20mi%20asistencia%20al%20evento." class="opcion">Confirmar ✅</a>
+            <a href="https://maps.app.goo.gl/G7Ar9nevgSDQZ6H17?g_st=aw" class="opcion">Ubicación 📍</a>
+        </div>
+    </div>
+
+    <script>
+        function abrirSobre() {
+            let sobre = document.querySelector('.sobre');
+            sobre.classList.toggle('abierto');
+
+            // Redirigir después de abrir el sobre (1 segundo de espera)
+            setTimeout(() => {
+                <iframe src="carpeta/yael.html"></iframe>
+            }, 0);
+        }
+    </script>
+    
+</body>
+</html>
